@@ -28,8 +28,8 @@ Un peu de CSS pour rendre les vidéos en iframe responsive. Par défaut la class
 }
 ```
 ## URLs reconnues
-- Youtube (full & tiny)
-- Dailymotion (full & tiny)
+- Youtube (full & tiny) & Youtube playlist
+- Dailymotion (full & tiny) & Dailymotion Jukebox
 - Vimeo (full only)
 
 Ne pas mettre d'url "embed" sous peine d'avoir une erreur au moment la lecture. Exemple : https://www.youtube.com/embed/NN68RqtRmjM
