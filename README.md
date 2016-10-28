@@ -1,14 +1,14 @@
 # CKEdito : VideoEmbed Plugin
-Intégrer facilement des vidéos de Youtube, Vimeo et Dailymotion dans votre éditeur CKEditor.
+Intégrer facilement des vidéos de Youtube, Vimeo et Dailymotion dans votre éditeur CKEditor à partir d'une simple adresse.
 
 ## Installation
 `config.extraPlugins = 'videoembed';`
 
 ## Utilisation
-Entrer simplement l'adresse d'une vidéo dans le champs, exemple :https://www.youtube.com/watch?v=EOIvnRUa3ik. Le Plugin se chargera d'apadter le code automatiquement si la vidéo vient de youtube, dailymotion ou vimeo.
+Entrer simplement l'adresse d'une vidéo dans le champ, exemple :https://www.youtube.com/watch?v=EOIvnRUa3ik. Le Plugin se chargera d'apadter le code automatiquement si la vidéo vient de youtube, dailymotion ou vimeo.
 
 ## Video Responsive
-Un peu de CSS pour rendre les vidéos en iframe responsive.
+Un peu de CSS pour rendre les vidéos en iframe responsive. Par défaut la class de la div container est *.videoEmbed* vous pouvez personnaliser ce nom de classe au moment de l'intégration de la vidéo dans le champ spécifique. Voici un exemple de code SASS assez simple pour rendre vos vidéos responsives dans la majorité des cas.
 ```sass
 .videoEmbed {
     position: relative;
@@ -25,3 +25,5 @@ Un peu de CSS pour rendre les vidéos en iframe responsive.
     }
 }
 ```
+## URLs reconnues
+Pour le moment seul les URLs de Youtube (full ou tiny), Dailymotion (full ou tiny) et Viemo(full) sont reconnues par le plugin. Ne pas mettre d'url embed sous peine d'avoir une erreur au moment la lecture. Exemple : https://www.youtube.com/embed/NN68RqtRmjM
