@@ -28,4 +28,8 @@ Un peu de CSS pour rendre les vidéos en iframe responsive. Par défaut la class
 }
 ```
 ## URLs reconnues
-Pour le moment seul les URLs de Youtube (full ou tiny), Dailymotion (full ou tiny) et Viemo(full) sont reconnues par le plugin. Ne pas mettre d'url embed sous peine d'avoir une erreur au moment la lecture. Exemple : https://www.youtube.com/embed/NN68RqtRmjM
+- Youtube (full & tiny)
+- Dailymotion (full & tiny)
+- Vimeo (full only)
+
+Ne pas mettre d'url "embed" sous peine d'avoir une erreur au moment la lecture. Exemple : https://www.youtube.com/embed/NN68RqtRmjM
