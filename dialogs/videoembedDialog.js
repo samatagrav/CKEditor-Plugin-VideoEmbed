@@ -1,8 +1,7 @@
 /*
  *   Plugin developed by CTRL+N.
  *
- *   LICENCE: Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)
- *   https://creativecommons.org/licenses/by-nd/4.0/
+ *   LICENCE: GPL, LGPL, MPL
  *   NON-COMMERCIAL PLUGIN.
  *
  *   Website: https://www.ctrplusn.net/
