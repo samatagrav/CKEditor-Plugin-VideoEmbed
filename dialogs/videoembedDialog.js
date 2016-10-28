@@ -65,27 +65,43 @@ function detect(url) {
     // full youtube url
     if (url.indexOf('youtube') > 0) {
         id = getId(url, "?v=", 3);
-        embed_url = 'https://www.youtube.com/embed/' + id;
+        if (id.indexOf('&list=') > 0) {
+            lastId = getId(id, "&list=", 6);
+            return embed_url = 'https://www.youtube.com/embed/' + id + '?list=' + lastId;
+        }
+        return embed_url = 'https://www.youtube.com/embed/' + id;
     }
     // tiny youtube url
     if (url.indexOf('youtu.be') > 0) {
         id = getId(url);
-        embed_url = 'https://www.youtube.com/embed/' + id;
+        // if this is a playlist
+        if (id.indexOf('&list=') > 0) {
+            lastId = getId(id, "&list=", 6);
+            return embed_url = 'https://www.youtube.com/embed/' + id + '?list=' + lastId;
+        }
+        return embed_url = 'https://www.youtube.com/embed/' + id;
     }
     // full vimeo url
     if (url.indexOf('vimeo') > 0) {
         id = getId(url);
-        embed_url = 'https://player.vimeo.com/video/' + id + '?badge=0';
+        return embed_url = 'https://player.vimeo.com/video/' + id + '?badge=0';
     }
     // full dailymotion url
     if (url.indexOf('dailymotion') > 0) {
-        id = getId(url);
-        embed_url = 'https://www.dailymotion.com/embed/video/' + id;
+        // if this is a playlist (jukebox)
+        if (url.indexOf('/playlist/') > 0) {
+           id = url.substring(url.lastIndexOf('/playlist/') + 10, url.indexOf("/1#video="));
+           console.log(id);
+            return embed_url = 'http://www.dailymotion.com/widget/jukebox?list[]=%2Fplaylist%2F' + id + '%2F1&&autoplay=0&mute=0';
+        } else {
+            id = getId(url);
+        }
+        return embed_url = 'https://www.dailymotion.com/embed/video/' + id;
     }
     // tiny dailymotion url
     if (url.indexOf('dai.ly') > 0) {
         id = getId(url);
-        embed_url = 'https://www.dailymotion.com/embed/video/' + id;
+        return embed_url = 'https://www.dailymotion.com/embed/video/' + id;
     }
     return embed_url;
 }

@@ -11,7 +11,7 @@
 CKEDITOR.plugins.add('videoembed', {
     icons: 'videoembed',
     lang: 'fr,en',
-    version: 1.0,
+    version: 1.1,
     init: function (editor) {
         // Command
         editor.addCommand('videoembed', new CKEDITOR.dialogCommand('videoembedDialog'));
