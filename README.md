@@ -1,4 +1,4 @@
-# CKEdito : VideoEmbed Plugin
+# CKEditor : VideoEmbed Plugin
 Intégrer facilement des vidéos de Youtube, Vimeo et Dailymotion dans votre éditeur CKEditor à partir d'une simple adresse.
 #### CKEditor version : 4.5
 #### Support Language : Français, English
