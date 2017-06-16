@@ -107,7 +107,9 @@ function detect(url) {
 }
 
 // Return video ID from URL
-function getId(url, string = "/", index = 1) {
+function getId(url, string , index = 1) {
+    string = string || "/";
+    index = index || 1;
     return url.substring(url.lastIndexOf(string) + index, url.length);
 }
 
